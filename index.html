@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Vollkorn);
+      @import url(https://fonts.googleapis.com/css?family=Hack);
       @font-face {
           font-family: Halis Round;
           font-style: normal;
@@ -17,7 +18,10 @@
           font-weight: 600;
           src: url("assets/fonts/campton-semibold.ttf") format("truetype");
       }
-      body { font-family: 'Volkorn'; }
+      body {
+        font-family: 'Volkorn';
+        color: black;
+      }
       h1 {
         font-family: 'Halis Round';
         color: #333333;
@@ -25,34 +29,247 @@
       h2, h3 {
         font-family: 'Campton';
       }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code, .remark-inline-code {
+        font-family: 'Hack';
+      }
+      .white_text {
+        color: white;
+      }
+
     </style>
   </head>
   <body>
     <textarea id="source">
 
-class: center, middle
+layout: true
+name: title
 
+class:center
+.left[![logo](assets/images/logo.svg)]
+<br><br><br><br>
+
+---
+layout: true
+name: textures
+background-position: right
+background-size: 10% 100%
+
+---
+layout: true
+name: yellow
+background-color: #f2e14c
+![logo](assets/images/logo.svg)
+
+---
+layout: true
+name: light_grey
+background-color: #f5f4f2
+![logo](assets/images/logo.svg)
+
+---
+layout: true
+name: dark_grey
+class: white_text
+background-color: #496c7d
+![logo](assets/images/logo_light.svg)
+
+---
+layout: true
+name: red
+class: white_text
+background-color: #f0572a
+![logo](assets/images/logo_light.svg)
+
+---
+layout: true
+name: blue
+class: white_text
+background-color: #1f3a80
+![logo](assets/images/logo_light.svg)
+
+---
+layout: true
+name: sea
+template: textures
+background-image: url("assets/images/texture_1.png")
+background-color: #f2e14c
+![logo](assets/images/logo.svg)
+
+---
+layout: true
+name: birds
+template: textures
+background-image: url("assets/images/bird_panel_1.svg")
+background-color: #f5f4f2
+![logo](assets/images/logo.svg)
+
+---
+layout: true
+name: fields
+class: white_text
+template: textures
+background-image: url("assets/images/texture_5.png")
+background-color: #496c7d
+![logo](assets/images/logo_light.svg)
+
+---
+layout:true
+name:sparks
+class: white_text
+template: textures
+background-image: url("assets/images/texture_9.png")
+background-color: #f0572a
+![logo](assets/images/logo_light.svg)
+
+---
+layout: true
+name: art
+background-position: bottom right
+background-size: 40% 90%
+background-repeat: repeat
+
+---
+layout:true
+name:small_dots
+template: art
+background-image: url("assets/images/hiw_pattern_1.svg")
+background-color: #1f3a80
+![logo](assets/images/logo_light.svg)
+
+---
+layout:true
+name:ants
+template: art
+background-image: url("assets/images/hiw_pattern_2.svg")
+background-color: #f2e14c
+![logo](assets/images/logo.svg)
+
+---
+layout:true
+name:stripes
+template: art
+background-image: url("assets/images/hiw_pattern_3.svg")
+background-color: white
+![logo](assets/images/logo.svg)
+
+---
+layout:true
+name:rain
+template: art
+background-image: url("assets/images/hiw_pattern_4.svg")
+background-color: #f5f4f2
+![logo](assets/images/logo.svg)
+
+---
+layout:true
+name:rings
+template: art
+background-image: url("assets/images/hiw_pattern_5.svg")
+background-color: white
+![logo](assets/images/logo.svg)
+
+---
+layout:true
+name:dented
+background-position: bottom
+background-size: 100% 20%
+background-repeat: repeat
+background-image: url("assets/images/timeline_pattern_1.svg")
+background-color: white
+![logo](assets/images/logo.svg)
+
+---
+template: title
 # SAFE Network meetup
 ## London, 29/08/2018
 
 ---
+template: sea
+# Agenda
 
-# Fonts look good enough
+--
+## ABFT
 
-1. Introduction
-2. Deep-dive
-3. ...
+--
+## PARSEC
 
 ---
+template: birds
+## ABFT
 
-# Introduction
+```rust
+fn main() {
+  let x = 42;
+}
+```
+
+---
+template: fields
+## PARSEC
+
+A pretty cool protocol
+---
+template: sparks
+## Another one
+
+---
+template: small_dots
+
+### Test the small dots
+
+---
+template: ants
+## Test the ants
+
+At some point, I will need to figure out how to make the text white
+
+---
+template: stripes
+# Test the stripes
+
+---
+template: rain
+# It is raining today
+
+## Where is...
+
+... my umbrella?
+
+---
+template: rings
+# And in the shadows, bind them
+
+---
+template: yellow
+# Yellow
+
+---
+template: light_grey
+# Light grey
+
+---
+template: dark_grey
+# Dark grey
+
+---
+template: red
+# Red
+
+---
+template: blue
+# Blue
+
+---
+template: dented
+# This could be the last slide
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({
+        highlightLanguage: 'rust',
+        highlightStyle: 'monokai'});
     </script>
   </body>
 </html>
