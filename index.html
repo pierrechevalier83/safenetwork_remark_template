@@ -38,6 +38,7 @@
       .white_text h1 {
         color: #f5f4f2;
       }
+      .remark-code-line-highlighted     { background-color: #373832; }
 
     </style>
   </head>
@@ -200,12 +201,36 @@ template: sea
 template: birds
 ## ABFT
 
-```rust
+```
 fn main() {
-  let x = 42;
+    let x = 42;
+    let y = x + 1;
 }
 ```
 
+---
+template: birds
+count: false
+## ABFT
+
+```
+fn main() {
+*   let x = 42;
+    let y = x + 1;
+}
+```
+
+---
+template: birds
+count: false
+## ABFT
+
+```
+fn main() {
+    let x = 42;
+*   let y = x + 1;
+}
+```
 ---
 template: fields
 ## PARSEC
@@ -273,6 +298,7 @@ template: dented
     <script>
       var slideshow = remark.create({
         highlightLanguage: 'rust',
+        highlightLines: 'true',
         highlightStyle: 'monokai'});
     </script>
   </body>
