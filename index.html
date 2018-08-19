@@ -72,7 +72,7 @@ class:center
 layout: true
 name: textures
 background-position: right
-background-size: 10% 100%
+background-size: 12% 100%
 
 ---
 layout: true
@@ -151,6 +151,7 @@ background-repeat: repeat
 ---
 layout:true
 name:small_dots
+class: white_text
 template: art
 background-image: url("assets/images/hiw_pattern_1.svg")
 background-color: #1f3a80
@@ -190,32 +191,153 @@ background-color: white
 
 ---
 layout:true
-name:dented
+name:the_end
 background-position: bottom
 background-size: 100% 20%
 background-repeat: repeat
 background-image: url("assets/images/timeline_pattern_1.svg")
 background-color: white
-.logo[![logo](assets/images/logo.svg)]<br>
+class:center
+.logo.left[![logo](assets/images/logo.svg)]
+<br><br><br><br><br><br><br><br>
+
 
 ---
 template: title
-# SAFE Network meetup
-## London, 29/08/2018
+# SAFE Network presentation template
+## Using [remark.js](https://github.com/gnab/remark)
+
+???
+This slide uses the `title` template.
+
+After the 3 question marks, once can
+write notes that are visible in presenter
+mode (shortcut: P)
 
 ---
 template: sea
 # Agenda
 
---
-## ABFT
+???
+This one uses the `sea` template.
 
 --
-## PARSEC
+count: false
+## Aesthetics
+
+???
+It demonstrates how to use implicit templates to
+add points one-by-one using two dashes
+
+--
+count: false
+## Functionalities
+???
+Using count: false prevents the slide number to
+increase for what is essentially the same slide,
+only with transitions.
+
+--
+count: false
+## Usage
 
 ---
 template: birds
-## ABFT
+## Aesthetics
+### Our brand
+
+???
+What do you think of the `birds` template?
+--
+count: false
+The SAFE Network brand is front and center:
+- Logo on top of each slide
+
+--
+
+count: false
+### Our assets
+--
+count: false
+- Color palette
+- Fonts
+- Background images
+
+... all from safenetwork.tech
+
+???
+Fonts:
+- Halis rounded for h1
+- Campton semibold for h2 and h3
+- Volkorn for the body
+- Hack for code snippets (I took some freedom here)
+
+Color palette:
+- white: #000000
+- yellow: #f2e14c
+- light_grey: #f5f4f2
+- dark_grey: #496c7d
+- red: #f0572a
+- blue: #1f3a80
+- code snippet: monokai
+
+---
+template: fields
+## Aesthetics
+
+### Always readable
+???
+Meet the `fields` template
+--
+
+count: false
+Notice how the logo and the text are white as
+when the background color is darker
+
+--
+
+count: false
+No fiddling: alignment is always pixel perfect
+
+---
+template: sparks
+## Aesthetics
+### Simple
+
+???
+This is the `spark` template.
+
+This is the last `texture` template.
+
+--
+count: false
+
+Simple enough for a consistent clean look
+
+--
+count: false
+### But not boring
+
+--
+count: false
+
+Keeps the slightly anarchaic ethos from the website
+
+???
+
+Now, as we are preparing to move on to a new
+section of the presentation, the slide layout will
+change to `art` (with the textures being laid out differently) 
+
+---
+template: small_dots
+## Functionalities
+### Code snippets 
+
+???
+This slide uses the template: `small_dots`
+--
+count: false
 
 ```
 fn main() {
@@ -223,11 +345,16 @@ fn main() {
     let y = x + 1;
 }
 ```
+--
+count: false
+
+Code is syntax highlighted in rust by default
 
 ---
-template: birds
+template: small_dots
 count: false
-## ABFT
+## Functionalities
+### Code snippets
 
 ```
 fn main() {
@@ -235,11 +362,17 @@ fn main() {
     let y = x + 1;
 }
 ```
+Code is syntax highlighted in rust by default
+
+It takes some duplication, but lines can be<br> highlighted
+???
+This slide uses the template: `small_dots`
 
 ---
-template: birds
+template: small_dots
 count: false
-## ABFT
+## Functionalities
+### Code snippets
 
 ```
 fn main() {
@@ -247,68 +380,202 @@ fn main() {
 *   let y = x + 1;
 }
 ```
----
-template: fields
-## PARSEC
+Code is syntax highlighted in rust by default
 
-A pretty cool protocol
----
-template: sparks
-## Another one
+It takes some duplication, but lines can be<br> highlighted
 
-.fitted-pic.center[![image](assets/images/macbok-safe-browser.png)]
-
----
-template: small_dots
-
-## Test the small dots
+one by one :)
+???
+This slide uses the template: `small_dots`
 
 ---
 template: ants
-## Test the ants
+## Functionalities
+### Pictures
+???
+This template is: `ants`
+--
+count: false
 
-Let's write some text here and see <br> how it wraps around
+.fitted-pic.center[![image](assets/images/macbok-safe-browser.png)]
+.center[Embedding pictures is easy as ABC]
 
 ---
 template: stripes
-## Test the stripes
+## Functionalities
+### Alignment
+
+???
+This template is: `stripes`
+--
+count: false
+
+Using html tags, text can go
+--
+count: false
+
+.left[**left,**]
+--
+count: false
+
+.center[**center**]
+--
+count: false
+
+.right[**or right**]
 
 ---
 template: rain
-## It is raining today
+## Functionalities
 
-## Where is...
+### Styles
+???
+This template is: `rain`
 
-... my umbrella?
+--
+count: false
+Using normal markdown syntax,
+
+--
+count: false
+
+- text can be **bold**
+--
+count: false
+
+- written in *italic*
+--
+count: false
+
+- or in a `monospace` font
+--
+count: false
+
+- > Quotes also work, everything really :)
 
 ---
 template: rings
-## And in the shadows,
-## bind them
+## Functionalities
+### Missing, but could be added
+???
+This template is: `rings`
+
+--
+count: false
+
+- graphs with mermaids
+--
+count: false
+
+- equations with `KaTex`
 
 ---
 template: yellow
-## Yellow
+## Usage
+### Shortcuts
+???
+Note how we transitioned to plain tempates for the last section.
 
+This one is called: `yellow`
+
+--
+count: false
+
+- Go full screen by hitting `F`
+--
+count: false
+
+- Enter presenter mode with `P`
+
+???
+
+Welcome to presenter mode.
+
+You can go back to the normal mode by hitting `P` again.
+
+I wrote some notes along most of the slides to explain their style etc.
+
+Feel free to browse the presentation as a presenter for some extra insight.
+--
+count: false
+
+- Clone the display with `C`
+--
+count: false
+
+- Reset the presentation timer with `T`
 ---
 template: light_grey
-## Light grey
+## Usage
+### Get the template presentation
+--
+count: false
+```bash
+git clone git@github.com/todo
+```
 
 ---
 template: dark_grey
-## Dark grey
+## Usage
+### Edit `index.html` with your favourite text editor
+--
+count: false
+```bash
+cd todo
+vim index.html
+```
 
 ---
 template: red
-## Red
+## Usage
+### As simple as markdown
 
+--
+count: false
+
+- Simply edit the markdown. All the layout is already sorted.
+- For instance, here is the `Agenda` slide:
+
+```remark
+template: sea
+# Agenda
+
+--
+count: false
+## Aesthetics
+
+--
+count: false
+## Functionalities
+
+--
+count: false
+## Usage
+
+```
 ---
 template: blue
-## Blue
+## Usage
+### For more advanced things
 
+--
+count: false
+Feel free to check the source for this presentation for inspiration for things like code snippets, etc.
+
+--
+count: false
+### Free your mind
+
+--
+count: false
+That's it, you can now focus all your attentions on the slides' content
+
+They will automatically look good for you
+
+No fiddling, just type your thoughts :)
 ---
-template: dented
-## This could be the last slide
+template: the_end
+# Thank you!
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
