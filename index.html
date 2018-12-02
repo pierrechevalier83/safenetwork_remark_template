@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Vollkorn);
-      @import url(https://fonts.googleapis.com/css?family=Hack);
+      @import url(https://fonts.googleapis.com/css?family=Monaco);
       @font-face {
           font-family: Halis Round;
           font-style: normal;
@@ -19,127 +19,264 @@
           src: url("assets/fonts/campton-semibold.ttf") format("truetype");
       }
       body {
-        font-family: 'Volkorn';
+        font-family: 'Vollkorn';
         color: black;
+        max-width: 90%;
       }
-      h1 {
+      h1, h2 {
         font-family: 'Halis Round';
-        color: #333333;
+        max-width: 95%;
       }
-      h2, h3 {
+      h3 {
         font-family: 'Campton';
+        max-width: 90%;
       }
       .remark-code, .remark-inline-code {
-        font-family: 'Hack';
-        width: 90%;
+        font-family: 'Monaco';
+        width: 70%;
+      }
+      .classy_text {
+        color: #333333;
+        max-width: 90%;
+      }
+      .grey_text {
+        color: #cccccc;
+        max-width: 90%;
       }
       .white_text {
         color: white;
-      }
-      .white_text h1 {
-        color: #f5f4f2;
+        max-width: 90%;
       }
       .remark-code-line-highlighted {
          background-color: #373832;
       }
+      .remark-code-span-highlighted {
+         background-color: #f0572a;
+      }
       .fitted-pic img {
         height: auto;
         width: auto;
-        max-height: 400px;
-        max-width: 90%;
+        max-height: 340px;
+        max-width: 80%;
+      }
+      .small-pic img {
+        height: auto;
+        width: auto;
+        max-height: 100px;
+        max-width: 350px;
+      }
+      .tiny-pic img {
+        height: auto;
+        width: auto;
+        max-height: 35px;
+        max-width: 35px;
       }
       .logo img {
         height: auto;
         width: auto;
         max-height: 35px;
         position: absolute;
-        top: 5%;
+        top: 8%;
+        left: 1.7%;
       }
-
     </style>
   </head>
   <body>
     <textarea id="source">
 
 layout: true
-name: title
-
-class:center
-.logo.left[![logo](assets/images/logo.svg)]
-<br><br><br><br>
+name: textures
+background-position: right bottom, 87.5% top, 75% bottom, 62.5% bottom, right top
+background-size: 11.1% 85%, 11.1% 15%, 11.1% 33%, 11.1% 6%, 11.1% 15%
+background-repeat: repeat;
 
 ---
 layout: true
-name: textures
-background-position: right
-background-size: 12% 100%
+name: textures_2
+background-position: right top, 87.5% bottom, 62.5% top, right bottom, 50% top
+background-size: 11.1% 56%, 11.1% 44%, 11.1% 16.25%, 11.1% 44%, 11.1% 6%
+background-repeat: repeat;
+
+---
+layout: true
+name: textures_3
+background-repeat: no-repeat
+background-position: right top, 87.5% top, 75% bottom, left top, 12.5% bottom
+background-size: 11.1% 100%, 11.1% 100%, 11.1% 16%, 11.1% 6%, 22.2% 6%
 
 ---
 layout: true
 name: yellow
+class: classy_text
 background-color: #f2e14c
-.logo[![logo](assets/images/logo.svg)]<br>
 
 ---
 layout: true
 name: light_grey
+class: classy_text
 background-color: #f5f4f2
-.logo[![logo](assets/images/logo.svg)]<br>
 
 ---
 layout: true
 name: dark_grey
 class: white_text
 background-color: #496c7d
-.logo[![logo](assets/images/logo_light.svg)]<br>
 
 ---
 layout: true
 name: red
 class: white_text
 background-color: #f0572a
-.logo[![logo](assets/images/logo_light.svg)]<br>
 
 ---
 layout: true
 name: blue
 class: white_text
 background-color: #1f3a80
-.logo[![logo](assets/images/logo_light.svg)]<br>
 
 ---
 layout: true
 name: sea
+class: classy_text
 template: textures
-background-image: url("assets/images/texture_1.png")
+background-image: url("assets/images/texture_1.png"), url("assets/images/texture_3.png"), url("assets/images/texture_2.png"), url("assets/images/yellow.png"), url("assets/images/yellow.png")
+background-color: #f5f4f2
+<br><br><br>
+
+---
+layout: true
+name: sea_2
+class: classy_text
+template: textures_2
+background-image: url("assets/images/texture_1.png"), url("assets/images/texture_2.png"), url("assets/images/texture_3.png"), url("assets/images/white.png"), url("assets/images/white.png")
 background-color: #f2e14c
-.logo[![logo](assets/images/logo.svg)]<br>
+<br><br><br>
+
+---
+layout: true
+name: sea_3
+class: classy_text
+template: textures_2
+background-image: url("assets/images/texture_1.png"), url("assets/images/texture_3.png"), url("assets/images/texture_2.png"), url("assets/images/yellow.png"), url("assets/images/yellow.png")
+background-color: #f2e14c
+<br><br><br>
 
 ---
 layout: true
 name: birds
-template: textures
-background-image: url("assets/images/bird_panel_1.svg")
+class: classy_text
+template: textures_3
+background-image: url("assets/images/bird_panel_4.svg"), url("assets/images/bird_panel_1.svg"), url("assets/images/bird_panel_2.svg"), url("assets/images/white.png"), url("assets/images/white.png")
 background-color: #f5f4f2
-.logo[![logo](assets/images/logo.svg)]<br>
+<br><br><br>
+
+---
+layout: true
+name: birds_1
+class: classy_text
+template: textures_3
+background-image: url("assets/images/bird_panel_4.svg"), url("assets/images/bird_panel_1.svg"), url("assets/images/bird_panel_2.svg"), url("assets/images/white.png"), url("assets/images/white.png")
+background-color: #ffffff
+<br><br><br>
+
+---
+layout: true
+name: birds_2
+class: classy_text
+template: textures
+background-image: url("assets/images/bird_panel_4.svg"), url("assets/images/bird_panel_1.svg"), url("assets/images/bird_panel_2.svg"), url("assets/images/light_grey.svg"), url("assets/images/light_grey.png")
+background-color: #ffffff
+<br><br><br>
+
+---
+layout: true
+name: birds_3
+class: classy_text
+template: textures_2
+background-image: url("assets/images/bird_panel_4.svg"), url("assets/images/bird_panel_1.svg"), url("assets/images/bird_panel_2.svg"), url("assets/images/white.png"), url("assets/images/white.png")
+background-color: #f5f4f2
+<br><br><br>
+
+---
+layout: true
+name: birds_4
+class: classy_text
+template: textures
+background-image: url("assets/images/bird_panel_4.svg"), url("assets/images/bird_panel_1.svg"), url("assets/images/bird_panel_2.svg"), url("assets/images/light_grey.svg"), url("assets/images/light_grey.png")
+background-color: #ffffff
+<br><br><br>
 
 ---
 layout: true
 name: fields
 class: white_text
 template: textures
-background-image: url("assets/images/texture_5.png")
+background-image: url("assets/images/texture_5.png"), url("assets/images/texture_6.png"), url("assets/images/texture_7.png"), url("assets/images/yellow.png"), url("assets/images/light_grey.png")
 background-color: #496c7d
-.logo[![logo](assets/images/logo_light.svg)]<br>
+<br><br><br>
+
+---
+layout: true
+name: fields_2
+class: white_text
+template: textures_2
+background-image: url("assets/images/texture_5.png"), url("assets/images/texture_6.png"), url("assets/images/texture_7.png"), url("assets/images/red.png"), url("assets/images/yellow.png")
+background-color: #496c7d
+<br><br><br>
+
+---
+layout: true
+name: fields_3
+class: white_text
+template: textures_3
+background-image: url("assets/images/texture_5.png"), url("assets/images/texture_6.png"), url("assets/images/texture_7.png"), url("assets/images/light_grey.png"), url("assets/images/yellow.png")
+background-color: #496c7d
+<br><br><br>
+
+---
+layout: true
+name: fields_4
+class: white_text
+template: textures
+background-image: url("assets/images/texture_7.png"), url("assets/images/texture_5.png"), url("assets/images/texture_6.png"), url("assets/images/light_grey.png"), url("assets/images/yellow.png")
+background-color: #496c7d
+<br><br><br>
 
 ---
 layout:true
 name:sparks
 class: white_text
 template: textures
-background-image: url("assets/images/texture_9.png")
+background-image: url("assets/images/texture_9.png"), url("assets/images/texture_10.png"), url("assets/images/spark-texture-1.jpg"), url("assets/images/light_grey.png"), url("assets/images/yellow.png")
 background-color: #f0572a
-.logo[![logo](assets/images/logo_light.svg)]<br>
+<br><br><br>
+
+---
+layout:true
+name:sparks_2
+class: white_text
+template: textures_2
+background-image: url("assets/images/spark-texture-1.jpg"), url("assets/images/spark-texture-3.jpg"), url("assets/images/texture_10.png"), url("assets/images/yellow.png"), url("assets/images/white.png")
+background-color: #f0572a
+<br><br><br>
+
+---
+layout:true
+name:sparks_3
+class: white_text
+template: textures_3
+background-image: url("assets/images/texture_9.png"), url("assets/images/texture_10.png"), url("assets/images/spark-texture-1.jpg"), url("assets/images/light_grey.png"), url("assets/images/yellow.png")
+background-color: #f0572a
+<br><br><br>
+
+---
+layout:true
+name:sparks_4
+class: white_text
+template: textures
+background-image: url("assets/images/spark-texture-1.jpg"), url("assets/images/spark-texture-3.jpg"), url("assets/images/texture_10.png"), url("assets/images/light_grey.png"), url("assets/images/yellow.png")
+background-color: #f0572a
+<br><br><br>
 
 ---
 layout: true
@@ -155,71 +292,74 @@ class: white_text
 template: art
 background-image: url("assets/images/hiw_pattern_1.svg")
 background-color: #1f3a80
-.logo[![logo](assets/images/logo_light.svg)]<br>
+<br><br><br>
 
 ---
 layout:true
 name:ants
+class: classy_text
 template: art
 background-image: url("assets/images/hiw_pattern_2.svg")
 background-color: #f2e14c
-.logo[![logo](assets/images/logo.svg)]<br>
+<br><br><br>
 
 ---
 layout:true
 name:stripes
+class: classy_text
 template: art
 background-image: url("assets/images/hiw_pattern_3.svg")
 background-color: white
-.logo[![logo](assets/images/logo.svg)]<br>
+<br><br><br>
 
 ---
 layout:true
 name:rain
+class: classy_text
 template: art
 background-image: url("assets/images/hiw_pattern_4.svg")
 background-color: #f5f4f2
-.logo[![logo](assets/images/logo.svg)]<br>
+<br><br><br>
 
 ---
 layout:true
 name:rings
+class: classy_text
 template: art
 background-image: url("assets/images/hiw_pattern_5.svg")
 background-color: white
-.logo[![logo](assets/images/logo.svg)]<br>
+<br><br><br>
 
 ---
 layout:true
 name:the_end
+class: classy_text
 background-position: bottom
 background-size: 100% 20%
 background-repeat: repeat
 background-image: url("assets/images/timeline_pattern_1.svg")
 background-color: white
 class:center
-.logo.left[![logo](assets/images/logo.svg)]
-<br><br><br><br><br><br><br><br>
-
+<br><br><br><br>
 
 ---
-template: title
+template: sea
 # SAFE Network presentation template
 ## Using [remark.js](https://github.com/gnab/remark)
 
 ???
-This slide uses the `title` template.
+This slide uses the `sea` template.
 
 After the 3 question marks, once can
 write notes that are visible in presenter
 mode (shortcut: P)
 
 ---
-template: sea
+template: sea_2
 # Agenda
 
 ???
-This one uses the `sea` template.
+This one uses the `sea_2` template.
 
 --
 count: false
@@ -511,7 +651,7 @@ template: light_grey
 --
 count: false
 ```bash
-git clone git@github.com/todo
+git clone git@github.com:pierrechevalier83/safenetwork_remark_template.git
 ```
 --
 count: false
@@ -519,7 +659,7 @@ count: false
 --
 count: false
 ```bash
-cd todo
+cd safenetwork_remark_template
 vim index.html
 ```
 
@@ -583,7 +723,6 @@ No fiddling, just type your thoughts :)
 ---
 template: the_end
 # Thank you!
-
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
@@ -591,7 +730,8 @@ template: the_end
       var slideshow = remark.create({
         highlightLanguage: 'rust',
         highlightLines: 'true',
-        highlightStyle: 'monokai'});
+        highlightSpans: 'true',
+        highlightStyle: 'tomorrow-night-blue'});
     </script>
   </body>
 </html>
